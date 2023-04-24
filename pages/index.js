@@ -51,4 +51,3 @@ export default function Home(){
     </div>
   )
 }
-// mongodb+srv://Sparsh30:OLQTowZrZtwZtpgx@cluster0.vgkyxxj.mongodb.net/?retryWrites=true&w=majority

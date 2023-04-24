@@ -2,6 +2,7 @@ import { MdDashboard, MdOutlineModeEditOutline, MdOutlineFeedback } from 'react-
 import { VscAdd } from 'react-icons/vsc'
 import { AiOutlineProfile } from 'react-icons/ai'
 import { useState } from 'react'
+import Link from 'next/link';
 
 export default function Sidemenu(){
     const [idx,setIdx]=useState(0);
@@ -12,28 +13,16 @@ export default function Sidemenu(){
                 Dashboard
             </div>
 
-            <div onClick={()=> setIdx(1)} className={`flex justify-start items-center cursor-pointer mb-3 py-3 px-2 hover:bg-gray-300 ${idx===1 ? "border-r-8 border-[rgb(116,122,224)] bg-gray-300 text-[rgb(116,122,224)]":""}`}>
-                <VscAdd className='text-2xl mr-2' />
-                Add Product
-            </div>
-
             <div onClick={()=> setIdx(2)} className={`flex justify-start items-center cursor-pointer mb-3 py-3 px-2 hover:bg-gray-300 ${idx===2 ? "border-r-8 border-[rgb(116,122,224)] bg-gray-300 text-[rgb(116,122,224)]":""}`}>
                 <AiOutlineProfile className='text-2xl mr-2' />
                 View Profile
             </div>
 
-            <div onClick={()=> setIdx(3)} className={`flex justify-start items-center cursor-pointer mb-3 py-3 px-2 hover:bg-gray-300 ${idx===3 ? "border-r-8 border-[rgb(116,122,224)] bg-gray-300 text-[rgb(116,122,224)]":""}`}>
-                <MdOutlineModeEditOutline className='text-2xl mr-2' />
-                Edit Profile
-            </div>
-
-            <div onClick={()=> setIdx(4)} className={`flex justify-start items-center cursor-pointer mb-3 py-3 px-2 hover:bg-gray-300 ${idx===4 ? "border-r-8 border-[rgb(116,122,224)] bg-gray-300 text-[rgb(116,122,224)]":""}`}>
-                <MdOutlineFeedback className='text-2xl mr-2' />
-                Feedback
-            </div>
             <div onClick={()=> setIdx(5)} className={`flex justify-start items-center cursor-pointer mb-3 py-3 px-2 hover:bg-gray-300 ${idx===5 ? "border-r-8 border-[rgb(116,122,224)] bg-gray-300 text-[rgb(116,122,224)]":""}`}>
                 <MdOutlineFeedback className='text-2xl mr-2' />
+                <a href={'/'}>
                 Logout  
+                </a>
             </div>
             
 

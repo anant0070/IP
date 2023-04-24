@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-
+import Home from '../components/Home';
 const colors = [
   "red",
   "green",
-  "yellow",
+  "yellow", 
   "black",
   "blue"
 ]
@@ -43,15 +43,6 @@ function App() {
     }
   }, [lastPosition, mouseDown, selectedColor, setPosition])
 
-  const download = async () => {
-    const image = canvasRef.current.toDataURL('image/png');
-    const blob = await (await fetch(image)).blob();
-    const blobURL = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = blobURL;
-    link.download = "image.png";
-    link.click();
-  }
 
   const clear = () => {
     ctx.current.clearRect(0, 0, ctx.current.canvas.width, ctx.current.canvas.height)
@@ -75,32 +66,10 @@ function App() {
 
   return (
     <div className="App">
-      <canvas
-        style={{
-          border: "1px solid #000"
-        }}
-        width={1300}
-        height={580}
-        ref={canvasRef}
-        onMouseDown={onMouseDown}
-        onMouseUp={onMouseUp}
-        onMouseLeave={onMouseUp}
-        onMouseMove={onMouseMove}
-      />
-      <br />
-      <select
-        value={selectedColor}
-        onChange={(e) => setSelectedColor(e.target.value)}
-      >
-        {
-          colors.map(
-            color => <option key={color} value={color}>{color}</option>
-          )
-        }
-      </select>
-      <button onClick={clear}>Clear</button>
-    </div>
+      <Home/>
+      </div>
   );
 }
 
 export default App;
+

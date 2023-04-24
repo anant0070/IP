@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { BiUser, BiShow } from 'react-icons/bi';
 import validator from 'validator';
-import Draw from './../draw'
 import RingLoader from 'react-spinners/RingLoader';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";

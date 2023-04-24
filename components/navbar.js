@@ -5,7 +5,7 @@ export default function Navbar(){
     return (
         <div className="flex justify-between items-center px-8 py-2 bg-gray-100">
             <div className="">
-                <span className='text-5xl hidden md:inline-block'>LOGO</span>
+                <span className='text-5xl hidden md:inline-block'>SURFACE</span>
                 <HiMenu className='md:hidden text-4xl inline-block' />
             </div>
             <div className="flex justify-center items-center text-lg w-fit">
